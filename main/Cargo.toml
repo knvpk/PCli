@@ -2,7 +2,7 @@
 name = "main"
 description = "All the core logic that powers the cli"
 authors = [
-    "Pavan Katakam <pavan.katakam@senecaglobal.com>"
+    "Pavan Katakam <katakampavan.btech@gmail.com>"
 ]
 version = "0.1.0"
 edition = "2021"

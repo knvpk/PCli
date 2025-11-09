@@ -9,7 +9,7 @@ use valuable::Valuable;
     author,
     version,
     about,
-    long_about = "An CLI for aws and other operations used in seneca."
+    long_about = "A console application for developers to deal with daily tasks."
 )]
 pub struct CommandArgs {
     #[clap(subcommand)]

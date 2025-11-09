@@ -1,10 +1,10 @@
 
 ARG BUILD_DATE
 ARG VERSION
-ARG AUTHOR="pavan.katakam@senecaglobal.com"
-ARG DESCRIPTION="CLI for senecaglobal users"
-ARG NAME="vikalp"
-ARG VENDOR="SenecaGlobal"
+ARG AUTHOR="katakampavan.btech@gmail.com"
+ARG DESCRIPTION="CLI for developers"
+ARG NAME="p_cli"
+ARG VENDOR="KNVPK"
 
 FROM rustlang/rust:nightly-slim as builder
 

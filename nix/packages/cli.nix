@@ -30,7 +30,7 @@ pkgs.rustPlatform.buildRustPackage {
   ];
 
   meta = with pkgs.lib; {
-    description = "An cli tool to use with different softwares in seneca global.";
+    description = "A console application for developers to deal with daily tasks.";
     license = licenses.mit;
     maintainers = cargoToml.package.authors;
     platforms = platforms.linux;

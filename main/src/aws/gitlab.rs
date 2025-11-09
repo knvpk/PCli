@@ -35,7 +35,7 @@ pub struct TokenClaims {
     sub: String,
 }
 
-const URL: &str = "https://git.senecaglobal.in/";
+const URL: &str = "https://git.example.com/";
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct JWKS {
