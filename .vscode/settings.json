@@ -1,0 +1,14 @@
+{
+    "rust-analyzer.checkOnSave": false,
+    "nix.enableLanguageServer": true,
+    "editor.formatOnSave": true,
+    "nix.formatterPath": "nixfmt",
+    "nix.serverPath": "nixd",
+    "nix.serverSettings": {
+        "nixd": {
+             "formatting": {
+                "command": ["nixfmt"]
+             }
+        }
+    },
+}

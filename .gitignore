@@ -1,0 +1,14 @@
+target/
+
+.env
+
+infra/data/*
+!infra/data/.gitkeep
+
+logs/*
+!logs/.gitkeep
+
+.direnv/*
+!.direnv/.gitkeep
+
+result

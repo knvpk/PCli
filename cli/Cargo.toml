@@ -1,0 +1,38 @@
+[package]
+name = "cli"
+description = "An cli tool to use with different softwares in seneca global."
+authors = ["Pavan Katakam <pavan.katakam@senecaglobal.com>"]
+version = "1.0.0"
+edition = "2021"
+readme = "Readme.md"
+keywords = ["argument", "cli", "arg", "parser", "parse"]
+categories = ["command-line-interface"]
+rust-version = "1.79.0"
+
+[dependencies]
+tracing = { version = "0.1.40" }
+tracing-subscriber = { version = "0.3.0", features = [
+	"json",
+	"env-filter",
+	"ansi",
+] }
+tokio = { version = "1", features = ["full"] }
+clap = { version = "4.5.3", features = ["derive"] }
+main = { version = "*", path = "../main" }
+tera = { version = "1.19.1" }
+lazy_static = { version = "1.4.0" }
+serde = { workspace = true }
+serde_json = { workspace = true }
+valuable = { version = "0.1.0", features = ["derive"] }
+tracing-appender = "0.2.3"
+
+[build-dependencies]
+cargo_metadata = { version = "0.18.1" }
+
+[dev-dependencies]
+cargo-husky = { workspace = true }
+
+[package.metadata.default]
+name = "Vikalp"
+short-name = "vikalp"
+vendor = "SenecaGlobal"

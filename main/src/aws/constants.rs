@@ -1,0 +1,3 @@
+pub const AWS_PROFILE: &str = "AWS_PROFILE";
+pub const AWS_ROLE_ARN: &str = "AWS_ROLE_ARN";
+pub const AWS_SHARED_CREDENTIALS_FILE: &str = "AWS_SHARED_CREDENTIALS_FILE";

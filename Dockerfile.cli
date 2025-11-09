@@ -1,0 +1,67 @@
+
+ARG BUILD_DATE
+ARG VERSION
+ARG AUTHOR="pavan.katakam@senecaglobal.com"
+ARG DESCRIPTION="CLI for senecaglobal users"
+ARG NAME="vikalp"
+ARG VENDOR="SenecaGlobal"
+
+FROM rustlang/rust:nightly-slim as builder
+
+ARG BUILD_DATE
+ARG VERSION
+ARG AUTHOR
+ARG DESCRIPTION
+ARG NAME
+ARG VENDOR
+
+LABEL maintainer=${AUTHOR}
+
+LABEL org.opencontainers.image.authors=${AUTHOR}
+LABEL org.opencontainers.image.description=${DESCRIPTION}
+LABEL org.opencontainers.image.vendor=${VENDOR}
+LABEL org.opencontainers.image.version=${VERSION}
+LABEL org.opencontainers.image.create=${BUILD_DATE}
+LABEL org.opencontainers.image.title=${NAME}
+
+LABEL org.label-schema.schema-version="1.0"
+LABEL org.label-schema.build-date=${BUILD_DATE}
+LABEL org.label-schema.description=${DESCRIPTION}
+LABEL org.label-schema.version=${VERSION}
+LABEL org.label-schema.vendor=${VENDOR}
+
+WORKDIR /usr/src/app
+
+RUN apt-get -y update
+RUN apt-get -y install build-essential
+
+COPY . .
+
+RUN make release
+
+FROM scratch
+
+ARG BUILD_DATE
+ARG VERSION
+ARG AUTHOR
+ARG DESCRIPTION
+ARG NAME
+ARG VENDOR
+
+LABEL maintainer=${AUTHOR}
+
+LABEL org.opencontainers.image.authors=${AUTHOR}
+LABEL org.opencontainers.image.description=${DESCRIPTION}
+LABEL org.opencontainers.image.vendor=${VENDOR}
+LABEL org.opencontainers.image.version=${VERSION}
+LABEL org.opencontainers.image.create=${BUILD_DATE}
+LABEL org.opencontainers.image.title=${NAME}
+
+LABEL org.label-schema.schema-version="1.0"
+LABEL org.label-schema.build-date=${BUILD_DATE}
+LABEL org.label-schema.description=${DESCRIPTION}
+LABEL org.label-schema.version=${VERSION}
+LABEL org.label-schema.vendor=${VENDOR}
+
+COPY --from=builder /usr/src/app/target/release/cli ./
+CMD [ "./cli" ]

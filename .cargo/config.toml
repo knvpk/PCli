@@ -1,0 +1,9 @@
+[build]
+rustflags = [
+    "-Z",
+    "threads=8",
+    "--cfg",
+    "tracing_unstable",
+    # "-C",
+    # "target-feature=+crt-static",
+]

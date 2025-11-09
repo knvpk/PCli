@@ -1,0 +1,18 @@
+[workspace]
+resolver = "2"
+members = ["cli", "main"]
+default-members = ["cli"]
+
+
+[profile.release]
+strip = false
+opt-level = "s"
+lto = true
+codegen-units = 1
+
+[workspace.dependencies]
+cargo-husky = { version = "=1.5.0", default-features = false, features = [
+    "user-hooks",
+] }
+serde = { version = "1.0.197", features = ["derive"] }
+serde_json = { version = "1.0.115" }
