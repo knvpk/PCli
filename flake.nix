@@ -29,7 +29,7 @@
             yq
           ];
         };
-        pcli = pkgs.callPackage ./nix/packages/cli.nix { };
+        cli = pkgs.callPackage ./nix/packages/cli.nix { };
       };
 
       devShells.${system}.default = pkgs.mkShell {

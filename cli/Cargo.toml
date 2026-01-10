@@ -1,5 +1,5 @@
 [package]
-name = "cli"
+name = "p_cli"
 description = "A console application for developers to deal with daily tasks."
 authors = ["Pavan Katakam <katakampavan.btech@gmail.com>"]
 version = "1.0.0"

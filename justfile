@@ -15,7 +15,7 @@ build:
 
 [doc('Build cli app using nix.')]
 build_cli:
-	nix build .#pcli
+	nix build .#cli
 
 release:
 	cargo build --release --all-targets
