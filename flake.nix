@@ -23,10 +23,6 @@
           paths = with pkgs; [
             just
 
-            # rustc
-            # cargo
-            # clippy
-            # rustfmt
             rustup
             pkg-config
 
@@ -44,10 +40,6 @@
 
           just
 
-          # rustc
-          # cargo
-          # clippy
-          # rustfmt
           rustup
           pkg-config
 
